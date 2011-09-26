@@ -3,7 +3,7 @@ import sys
 import re
 
 cssfile = open('../css/style.css', 'r')
-inputhtml = open('../index.html', 'r')
+inputhtml = open('../resume.html', 'r')
 outputhtml = open('../jobmine.html', 'w+')
 
 for line in inputhtml:
