@@ -58,14 +58,14 @@
 	}
 	
 	#resume h1, #resume h2, #resume h3, #resume h4 , #resume p, #resume li {
-		font-family: "Open Sans", "Lucida Sans Unicode", sans-serif;
+		font-family: "Open Sans", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 		font-size: 14px;
 		line-height: 21px;
 	}
 	
 	#resume h1 {
 		color: #9E9E9E;
-		letter-spacing: 2px;
+		letter-spacing: 1px;
 	}
 	
 	#resume h1.name {
@@ -91,6 +91,10 @@
 		margin: 0 auto;
 	}
 	
+	#resume li {
+	    max-width: 100%;
+	}
+	
 	#resume .desc {
 		margin-top: 21px;
 	}
@@ -103,9 +107,12 @@
 		float: right;
 	}
 	
+	#resume b, #resume i, #resume h2 {
+		font-family: "Open Sans", "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	}
+	
 	#resume b {
 		font-weight: 600;
-		letter-spacing: 0.5px;
 	}
 	
 	#resume i {
@@ -129,16 +136,14 @@
 		margin-bottom: 21px;
 	}
 	
+	.pagebreak {
+	    display: none;
+	}
+	
 	.smallcaps {
 		text-transform: uppercase;
 		font-size: smaller;
 		letter-spacing: 1px;
-	}
-	
-	.spacer {
-		text-align: center;
-		marin-top: 21px;
-		margin-bottom: 21px;
 	}
 	
 	/* Misc */
@@ -150,17 +155,39 @@
 	/* PRINT specific */
 	
 	@media print {
+		#resume {
+		    margin: 0 auto;
+		    width: 96%;
+		}
+		
 		#resume h1, #resume h2, #resume h3, #resume h4 , #resume p, #resume li {
-			font-family: "Open Sans", "Lucida Sans Unicode", sans-serif;
 			font-size: 12px;
 			line-height: 18px;
 		}
-		
-		#resume {
-		margin: 0 auto;
-		width: 100%;
-		max-width: 960px;
-		}
+	
+	    #resume h1.name {
+		    font-size: 24px;
+		    font-weight: 400;
+		    line-height: 36px;
+	    }
+	
+	    .title {
+		    margin-top: 18px;
+		    margin-bottom: 36px;
+	    }
+	    
+	    .resumeblock {
+		    margin-bottom: 18px;
+	    }
+	    
+	    #resume .desc {
+		    margin-top: 18px;
+	    }
+	
+		.pagebreak {
+		    page-break-before: always;
+		    display: block;
+	    }
 	}
 </style>
 </head>
@@ -170,7 +197,7 @@
         <div id="resume">
             <div class="title">
                 <h1 class="name">David Guo</h1>
-                <h2>2A Software Engineering</h2>
+                <h2>2B Software Engineering</h2>
             </div>
 
             <div class="blocktitle">
@@ -178,12 +205,11 @@
             </div>
             <div class="resumeblock">
                 <ul>
-                    <h2>I am&hellip;</h2>
-                    <li> <i>Well-rounded</i>.&emsp; Good working knowledge in low-level programming, software development, test automation, and web development </li>
-                    <li> <i>A hobbyist</i>.&emsp; Used <b>C</b> and <b>C++</b> to program PICkits and robots</li>
-                    <li> <i>A self-starter</i>.&emsp; Active web developer/designer with years of experience in <b>HTML/CSS, SQL,</b> and <b>JavaScript</b></li>
-                    <li> <i>A quick learner</i>.&emsp; Worked with PHP on the server-side but recently switched to <b>Python</b> </li>
-                    <li> <i>Curious</i>.&emsp; Experiments on a VPS to gather experience in web technologies such as <b>Django, node.js</b>, and <b>nginx</b></li>	    
+                    <li>Had great co-ops so far at <b>Mozilla</b> and <b>Trapeze</b> focusing on automation and tools</li>
+                    <li>Active web developer/designer with years of experience in <b>HTML/CSS, SQL,</b> and <b>JavaScript</b></li>
+                    <li>Comfortable using <b>Python</b> to develop web apps in <b>Django</b>, create modules for tools and automating tasks</li>
+                    <li>Comfortable with "real" languages too! Used <b>C</b> and <b>C++</b> to program PICkits and robots</li>
+                    <li>Constantly experimenting with new technologies like <b>node.js</b>
                 </ul>
             </div>
 
@@ -192,81 +218,118 @@
             </div>
             <div class="resumeblock">
                 <ul>
-                    <li><i>Software development</i>.&emsp; C, C++ (BOOST, TR1), C# (.NET 4.0, LINQ), Java</li>
-                    <li><i>Web development</i>.&emsp; CSS3, HTML5, JavaScript (jQuery, Node.js), PHP, Python (Django)</li>
-                    <li><i>Test automation</i>.&emsp; Selenium (RC, WebDriver) via C# .NET</li>
-                    <li><i>Development tools</i>.&emsp; Code::Blocks, Microsoft Visual Studio, NetBeans, vim</li>
-                    <li><i>Source control</i>.&emsp; git, svn</li>
+                    <li><i>Software development</i>.&emsp; C, C++, C#</li>
+                    <li><i>Web development</i>.&emsp; CSS3, HTML5, JavaScript (jQuery, Node.js), Python (Django)</li>
+                    <li><i>Test automation</i>.&emsp; Selenium (Sizzle, CSSQuery)</li>
                 </ul>
             </div>
 
             <div class="blocktitle">
-                <h1>work experience</h1>
+                <h1>previous co-ops</h1>
             </div>
+
             <div class="resumeblock">
+
                 <div class="floatleft">
-                    <p>Trapeze Group</p>
-                    <h2>Test Automation Analyst (Co-op)</h2>
+                    <p><b>Mozilla Corporation</b></p>
+                    <h2>Automation Services Intern</h2>
                 </div>
                 <div class="floatright">
-                    <h3>Mississauga, Ontario</h3>
+                    <h3>Mountain View, California</h3>
+                    <h3>Jan 2012 - May 2012</h3>
+                </div>
+                <div class="clear"></div>
+                <ul>
+                    <li>Developed a Firefox extension, MemChaser, used to monitor and display memory and garbage collection data</li>
+                    <li>Investigated and spec'd the effort to transition Firefox automated testing efforts to a newer tool (Mozmill 2)</li>
+                    <li>Made improvements to modules and tools used by Mozilla's testers</li>
+                    <li>Worked with Python, JavaScript, HTML, Jenkins, hg, git</li>
+                </ul>
+
+                <div class="floatleft">
+                    <p class="desc"><b>Trapeze Group</b></p>
+                    <h2>Test Automation Analyst</h2>
+                </div>
+                <div class="floatright">
+                    <h3 class="desc">Mississauga, Ontario</h3>
                     <h3>May 2011 - Sept 2011</h3>
                 </div>
                 <div class="clear"></div>
+                <ul>
+                    <li>Wrote 100+ automated tests for a transportation web application</li>
+                    <li>Built a static webpage generator to organize test steps and results, which was used in their Bamboo configuration</li>
+                    <li>Successfully led a migration process from Selenium 1 to Selenium 2</li>
+                    <li>Worked with C#, Selenium, JavaScript, HTML, Ant, mssql, svn</li>
+                </ul>
+
             </div>
+
             <div class="blocktitle">
-                <h1>relevant activities</h1>
+                <h1>currently focused on</h1>
             </div>
             <div class="resumeblock">
+
                 <div class="floatleft">
-                    <p>msgfuse.com</p>
-                    <h2>Group Project</h2>
+                    <p><b>Umeqo (.com)</b></p>
+                    <h2>Staff Member</h2>
                 </div>
                 <div class="floatright">
-                    <h3>In development</h3>
-                    <h3>Sept 2011 - Present</h3>
+                    <h3>Jan 2012 - Present</h3>
                 </div>
                 <div class="clear"></div>
                 <ul>
+                    <li>Working with a great team to develop a SaaS college recruiting solution</li>
+                    <li>Performing a generalist role; developing features and performing business functions</li>
+                    <li>Working with nginx, Apache, Solr, MySQL, memcached, Django</li>
+                </ul>
+
+                <div class="floatleft">
+                    <p class="desc"><b>Mozilla Automation & Tools Team</b></p>
+                    <h2>Contributor</h2>
+                </div>
+                <div class="floatright">
+                    <h3 class="desc">May 2012 - Present</h3>
+                </div>
+                <div class="clear"></div>
+                <ul>
+                    <li>Making improvements to modules and tools used by Mozilla's developers and testers</li>
+                    <li>Working with Python, Javascript</li>
+                </ul>
+
+            </div>
+
+
+            <div class="blocktitle">
+                <h1>past projects & activities</h1>
+            </div>
+            <div class="resumeblock">
+
+                <div class="floatleft">
+                    <p><b>msgfuse (.com)</b></p>
+                    <h2>Creator</h2>
+                </div>
+                <div class="floatright">
+                    <h3>Sept 2011 - Nov 2011</h3>
+                </div>
+                <div class="clear"></div>
+                <ul>
+                    <li>Experimental project to transmit dynamically expiring data securely using the web</li>
                     <li>Optimized web servers(nginx & Apache) and SQL database in a low-memory Debian VPS</li>
+                    <li>Worked with nginx, Apache, MySQL, Django</li>
                 </ul>
+
                 <div class="floatleft">
-                    <p class="desc">True Grid (tentative name)</p>
-                    <h2>Personal Project</h2>
+                    <p class="desc"><b>FIRST Robotics Club (Team 854)</b></p>
+                    <h2>Mentor (previously VP of Programming)</h2>
                 </div>
                 <div class="floatright">
-                    <h3 class="desc">Work in progress</h3>
-                    <h3>June 2011 - Present</h3>
+                    <h3 class="desc">Sept 2008 - Present</h3>
                 </div>
                 <div class="clear"></div>
                 <ul>
-                    <li>Mission is to generate static HTML/CSS grid layouts that stays true to typography</li>
-                    <li>Gathered information from authoritative typography books (Bringhurst, Muller-Brockmann, Kunz)</li>
-                </ul>
-                <div class="floatleft">
-                    <p class="desc">FIRST Robotics Club (Team 854)</p>
-                    <h2>Mentor</h2>
-                </div>
-                <div class="floatright">
-                    <h3 class ="desc">Etobicoke, Ontario</h3>
-                    <h3>Jan 2011 - Present</h3>
-                </div>
-                <div class="clear"></div>
-                <ul>
+                    <li>Implemented solutions to sport-like challenges that require PID controllers and computer vision</li>
                     <li>Responsible for teaching programming best practices to team members</li>
-                </ul>
-                <div class="floatleft">
-                    <p class="desc">FIRST Robotics Club (Team 854)</p>
-                    <h2>Vice President and Head of Programming</h2>
-                </div>
-                <div class="floatright">
-                    <h3 class="desc">Etobicoke, Ontario</h3>
-                    <h3>Sept 2008 - April 2010</h3>
-                </div>
-                <div class="clear"></div>
-                <ul>
-                    <li>Implemented solutions to problems that require PID controllers and computer vision</li>
-                    <li>Coded in C/C++ using Wind River Workbench, and debugged using VxWorks</li>	
+                    <li>Worked with C++ (Boost)
                 </ul>
             </div>
 
@@ -296,18 +359,6 @@
                     <li>FIRST Robotics Waterloo Regional <b>Bronze Medalist</b> (2009)</li>
                     <li>FIRST Robotics GTA Regional <b>Bronze Medalist</b> (2009)</li>
                     <li>FIRST Robotics <b>Delphi "Driving Tomorrow's Technology" Award</b> (2009)</li>
-                </ul>
-            </div>
-
-            <div class="blocktitle">
-                <h1>interests</h1>
-            </div>
-            <div class="resumeblock">
-                <h2>I like to&hellip;</h2>
-                <ul>
-                    <li><b>play</b> basketball and video games</li>
-                    <li><b>read</b> about economics and typography</li>
-                    <li><b>design</b> on the web</li>
                 </ul>
             </div>
         </div>
